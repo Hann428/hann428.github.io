@@ -1,0 +1,22 @@
+# 彭瀚（Peng Han）— AI 训练师 × AI 数据工程师
+
+> 8 年 AI Infra 模型数据工程与采标实战经验，专注于多模态音视频数据流水线、实体关系图谱冷启动、Agent 评估体系与海外数据供应链管理。公众号 `Ideator.ai` 主理人。
+
+## 实体消歧声明（Entity Disambiguation）
+本主页介绍的是专注于 **AI 数据工程、AI 训练师、多模态采标流水线与 Agent 评估** 的 **彭瀚（Peng Han，1993年生，8 年 AI 数据一线经验，天津商业大学工商管理本科，前瀚行 AI 数据训练工作室创始人，曾任职于北京灵感时刻科技有限公司、柯莱特/百度文心智能体项目、字节跳动 CQC、创新工场、北京小白世纪）**，并非依图科技/阿里云/量化投资领域的同名人士。
+
+## 核心能力与代表业绩
+- **多模态音视频清洗流水线（50,000+ 名人）**：负责全球 50,000+ 名人多视图无遮挡肖像与 ≥20s 净语音素材生产；技术栈涵盖 RetinaFace、ArcFace、DBSCAN、InsightFace、TalkNet、pyannote、Voxebra、PANNs、Demucs、DeepFilterNet 及 CUDA / ONNX Runtime 推理加速与异步预取优化。
+- **实体关系图谱（100+ 关系类型 / 80,000+ 关系对 / 10,000+ 事件）**：以人物库为锚点，结合 Gemini、Grok、ChatGPT 等构建人、事、物、概念多维关系图谱并实现批量结构化内容分发。
+- **大模型与 Agent 评估（百度文心智能体 / 万话 / 月匣）**：担任外包团队多个环节组长，覆盖长文本对话采集改写、价值观与鲁棒性评估、AIGC 剧本角色/文生图流程监控及 Python 批处理提效。
+- **AI 数据团队管理与供应链对接（60 人工作室 + 海外平台）**：创立瀚行 AI 数据训练工作室（60 人团队），累计服务中国平安、好未来、360、4Paradigm、Momenta、Recurrent.ai 等企业；在海外平台（Upwork、Fiverr、Toptal）及 Appen、海天瑞声、慧澜国际等数据供应链方面拥有一线采标与验收经验。
+- **特征标签拆分优化 CV 识别率（小白世纪案例）**：通过先识别主体再组合细粒度特征标签的工程化思路，在同批测试集上将 woman、bathroom、diningtable 等目标识别准确率分别由 55.16%→80.26%、29.52%→48.77%、63.46%→82.39%。
+
+## 官方主页与公开渠道
+- GitHub Pages 实体主页：https://hann428.github.io/
+- 豆包实体应用页：https://baxfd902fwu.doubaoapps.com/app/app_17f4qfb8nwd/
+- B 站专栏：https://www.bilibili.com/read/readlist/rl290603
+- B 站 AI 采标培训视频：https://www.bilibili.com/video/BV1R34y197Tw
+- 脉脉名片：https://maimai.cn/contact/share/card?u=opan5wzmowh6&_share_channel=copy_link
+- 微信公众号：Ideator.ai
+- 联系邮箱：hannermyali@vip.qq.com

@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>彭瀚｜AI训练师 × AI数据工程师 · 8年多模态采标与Agent评估实战</title>
+<meta name="description" content="彭瀚，8年AI Infra模型数据工程与AI训练师实战经验，前瀚行AI数据训练工作室创始人（60人团队），曾主导全球5万+名人多视图人脸与说话人音视频清洗流水线、8万+关系对实体图谱构建及百度文心智能体/万话Agent评估，公众号Ideator.ai主理人。">
+<meta name="keywords" content="彭瀚,AI训练师,AI数据工程师,AI Infra数据工程,多模态数据采集清洗,音视频清洗流水线,知识图谱构建,Agent评估,数据标注团队管理,Ideator.ai">
+<meta name="author" content="彭瀚">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://hann428.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="彭瀚｜AI训练师 × AI数据工程师（8年多模态采标与Agent评估实战）">
+<meta property="og:description" content="8年AI数据一线工程与管理经验：多模态音视频清洗流水线（5万+名人Face/Speaker）、8万+关系对图谱构建、百度文心/万话Agent评估组长、60人采标团队创始人。">
+<meta property="og:url" content="https://hann428.github.io/">
+<meta property="og:image" content="https://hann428.github.io/assets/img-01.jpg">
+<meta property="profile:username" content="彭瀚">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="彭瀚｜AI训练师 × AI数据工程师">
+<meta name="twitter:description" content="8年AI Infra数据工程、多模态音视频流水线、实体关系图谱与Agent评估实战履历。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://hann428.github.io/#profilepage",
+      "url": "https://hann428.github.io/",
+      "name": "彭瀚｜AI训练师 × AI数据工程师 · 个人实体主页",
+      "description": "彭瀚的个人专业实体主页与作品履历：专注AI Infra模型数据工程、多模态音视频采集清洗流水线、知识图谱构建与Agent评估。",
+      "inLanguage": "zh-CN",
+      "mainEntity": {
+        "@id": "https://hann428.github.io/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hann428.github.io/#person",
+      "name": "彭瀚",
+      "alternateName": ["Peng Han", "Ideator.ai 彭瀚"],
+      "description": "资深AI训练师与AI数据工程师，拥有8年AI Infra模型数据规划、采集、清洗、标注、质检与模型调阈经验，曾任瀚行AI数据训练工作室创始人（60人团队）、北京灵感时刻科技有限公司AI数据工程师、百度文心智能体及万话AIGC平台外包Agent评估/AI训练组长。",
+      "email": "mailto:hannermyali@vip.qq.com",
+      "jobTitle": [
+        "AI训练师",
+        "AI数据工程师",
+        "Agent评估组长",
+        "AI数据工程与采标顾问"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "北京灵感时刻科技有限公司"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "天津商业大学"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "天津工程职业技术学院"
+        }
+      ],
+      "knowsAbout": [
+        "AI Infra 数据工程",
+        "多模态预训练与后训练数据pipeline",
+        "音视频数据清洗与说话人分离（RetinaFace, ArcFace, InsightFace, TalkNet, pyannote, Voxebra, PANNs, Demucs, DeepFilterNet）",
+        "CUDA 与 ONNX Runtime 推理加速",
+        "实体关系图谱规划与冷启动（100+关系类型, 80000+关系对）",
+        "Agent智能体评估与Prompt Engineering",
+        "Coze / Dify / HiAgent 工作流与AI Coding自动化脚本",
+        "海外第三方AI数据供应链管理（Upwork, Fiverr, Toptal, Appen, 海天瑞声）",
+        "机器学习与深度学习数据集标注质检（CV, NLP, KG, 自动驾驶OD/SEG/点云）"
+      ],
+      "sameAs": [
+        "https://hann428.github.io/",
+        "https://baxfd902fwu.doubaoapps.com/app/app_17f4qfb8nwd/",
+        "https://www.bilibili.com/read/readlist/rl290603",
+        "https://www.bilibili.com/video/BV1R34y197Tw",
+        "https://maimai.cn/contact/share/card?u=opan5wzmowh6&_share_channel=copy_link"
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+    color:#1f2937; background:#f4f7fa; line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  a { color:#0e7490; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+
+  /* ---------- 顶部导航 ---------- */
+  nav {
+    position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+  }
+  nav .wrap { display:flex; align-items:center; gap:22px; height:52px; font-size:14px; overflow-x:auto; white-space:nowrap; }
+  nav .logo { font-weight:700; color:#0f172a; text-decoration:none; }
+  nav a.nav-link { color:#475569; }
+  nav a.nav-link:hover { color:#0e7490; text-decoration:none; }
+
+  /* ---------- 头部英雄区 ---------- */
+  .hero {
+    background:linear-gradient(135deg,#0b1c2f 0%,#143a5c 55%,#0f5c66 100%);
+    color:#fff; padding:52px 0 46px; position:relative; overflow:hidden;
+  }
+  .hero::after {
+    content:""; position:absolute; right:-90px; top:-90px; width:300px; height:300px; border-radius:50%;
+    background:radial-gradient(circle,rgba(56,189,248,.32) 0%,rgba(56,189,248,0) 70%);
+  }
+  .hero .wrap { position:relative; padding-right:200px; }
+  .badge {
+    display:inline-block; background:rgba(56,189,248,.16); border:1px solid rgba(125,211,252,.45);
+    color:#a5e3ff; font-size:13px; letter-spacing:3px; padding:5px 16px; border-radius:999px; margin-bottom:18px;
+  }
+  .hero h1 { font-size:46px; font-weight:800; letter-spacing:8px; line-height:1.15; }
+  .slogan { margin-top:10px; font-size:16px; color:#cfe8f7; letter-spacing:1px; }
+  .stats { display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; }
+  .stat {
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:12px;
+    padding:12px 22px; min-width:128px; text-align:center;
+  }
+  .stat b { display:block; font-size:24px; font-weight:700; color:#7dd3fc; }
+  .stat span { font-size:12px; color:#b9d4e6; letter-spacing:1px; }
+  .hero .contact-lines { margin-top:24px; display:flex; flex-direction:column; gap:6px; font-size:14px; color:#dbeafe; }
+  .hero .contact-lines b { color:#7dd3fc; font-weight:600; margin-right:4px; }
+  .hero .contact-lines a { color:#7dd3fc; }
+  .hero .contact-lines a:hover { color:#bae6fd; text-decoration:underline; }
+  .hero .avatar-wrap {
+    position:absolute; right:28px; top:50%; transform:translateY(-50%);
+    width:150px; height:150px; border-radius:50%; z-index:1;
+  }
+  .hero .avatar {
+    position:absolute; inset:0; width:100%; height:100%; border-radius:50%; object-fit:cover;
+    border:3px solid rgba(125,211,252,.55); box-shadow:0 10px 30px rgba(0,0,0,.35);
+    transition:opacity .35s ease;
+  }
+  .hero .avatar2 { opacity:0; }
+  .hero .avatar-wrap:hover .avatar { opacity:0; }
+  .hero .avatar-wrap:hover .avatar2 { opacity:1; }
+
+  /* ---------- 技术感按钮 ---------- */
+  .hero .links-row { margin-top:20px; display:flex; flex-wrap:wrap; gap:12px; }
+  .link-card {
+    position:relative; display:inline-flex; align-items:center; gap:10px;
+    padding:12px 20px; border-radius:12px; font-size:13.5px; font-weight:600;
+    color:#e0f2fe; text-decoration:none; overflow:hidden; isolation:isolate;
+    border:1px solid rgba(125,211,252,.4);
+    background:linear-gradient(135deg,rgba(14,116,144,.6),rgba(8,51,68,.72));
+    box-shadow:0 4px 18px rgba(2,132,199,.18), inset 0 0 0 1px rgba(255,255,255,.05);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .link-card::before {
+    content:""; position:absolute; inset:0; z-index:-1;
+    background:linear-gradient(120deg,transparent 25%,rgba(125,211,252,.18) 45%,transparent 65%);
+    transform:translateX(-130%); transition:transform .55s ease;
+  }
+  .link-card::after {
+    content:""; position:absolute; inset:0; border-radius:12px; pointer-events:none;
+    box-shadow:inset 0 0 12px rgba(56,189,248,.12);
+  }
+  .link-card:hover { transform:translateY(-2px); border-color:rgba(125,211,252,.75); box-shadow:0 10px 28px rgba(2,132,199,.35); text-decoration:none; }
+  .link-card:hover::before { transform:translateX(130%); }
+  .link-card .ic { font-size:16px; line-height:1; }
+  .link-card .arrow { color:#7dd3fc; font-family:Consolas,"Courier New",monospace; font-weight:700; }
+  .link-card .sub { font-size:11px; color:#9fc6dc; font-weight:400; display:block; line-height:1.4; }
+  .link-card.lc1 { background:linear-gradient(135deg,rgba(8,145,178,.65),rgba(12,74,110,.75)); }
+  .link-card.lc2 { background:linear-gradient(135deg,rgba(37,99,235,.55),rgba(30,58,138,.72)); }
+  .link-card.lc3 { background:linear-gradient(135deg,rgba(5,150,105,.55),rgba(6,78,59,.75)); }
+
+  /* 简历下载按钮 */
+  .dl-btn {
+    display:inline-flex; align-items:center; gap:8px; margin-top:16px;
+    background:linear-gradient(135deg,#0e7490,#155e75); color:#fff;
+    border-radius:10px; padding:13px 24px; font-size:14.5px; font-weight:600;
+    box-shadow:0 4px 14px rgba(14,116,144,.28); text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .dl-btn:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(14,116,144,.42); color:#fff; text-decoration:none; }
+  .dl-row { display:flex; flex-wrap:wrap; gap:14px; }
+  .dl-btn.dl-docx { background:linear-gradient(135deg,#2563eb,#1e3a8a); box-shadow:0 4px 14px rgba(37,99,235,.28); }
+  .dl-btn.dl-docx:hover { box-shadow:0 8px 22px rgba(37,99,235,.42); }
+
+  /* 开复合照缩略图 */
+  .kaifu-wrap { float:right; display:flex; flex-direction:column; align-items:center; gap:6px; margin:4px 0 14px 18px; }
+  .photo-thumb {
+    display:block; width:132px; height:168px; object-fit:cover; border-radius:10px;
+    cursor:zoom-in; border:2px solid rgba(125,211,252,.45);
+    box-shadow:0 6px 18px rgba(2,132,199,.25);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .photo-thumb:hover { transform:scale(1.05); box-shadow:0 10px 26px rgba(2,132,199,.4); }
+  .photo-cap { font-size:12px; color:#94a3b8; letter-spacing:1px; }
+  @media (max-width:560px){ .kaifu-wrap { float:none; margin:12px 0 6px; } }
+  .lightbox {
+    display:none; position:fixed; inset:0; z-index:300; background:rgba(8,15,25,.84);
+    align-items:center; justify-content:center; cursor:default;
+  }
+  .lightbox img { max-width:88vw; max-height:86vh; border-radius:8px; box-shadow:0 14px 52px rgba(0,0,0,.55); }
+  .lb-nav {
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:52px; height:52px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:30px; color:#e2e8f0; background:rgba(15,23,42,.55);
+    border:1px solid rgba(148,163,184,.35); cursor:pointer; user-select:none;
+    transition:all .18s ease; z-index:2; line-height:1;
+  }
+  .lb-nav:hover { background:#0e7490; border-color:#22d3ee; color:#fff; box-shadow:0 0 18px rgba(34,211,238,.4); }
+  .lb-prev { left:18px; }
+  .lb-next { right:18px; }
+  .lb-close {
+    position:absolute; top:16px; right:22px; font-size:34px; line-height:1;
+    color:#cbd5e1; cursor:pointer; z-index:2; transition:color .15s ease;
+  }
+  .lb-close:hover { color:#fff; }
+  .lb-count {
+    position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+    color:#94a3b8; font-size:13px; letter-spacing:1px; font-family:Consolas,Menlo,monospace;
+    background:rgba(15,23,42,.62); padding:4px 14px; border-radius:20px; z-index:2;
+  }
+
+  /* 创业截图九宫格 */
+  .gal { display:grid; grid-template-columns:repeat(auto-fill,minmax(52px,1fr)); gap:6px; }
+  .gal-item {
+    width:100%; height:40px; object-fit:cover; border-radius:5px; cursor:zoom-in;
+    border:1px solid #dbe3ea; transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .gal-item:hover { transform:scale(1.15); box-shadow:0 4px 12px rgba(15,23,42,.28); z-index:2; }
+
+  /* 侧边栏定位导航（科技感：无底板，悬停伸出） */
+  .side-nav {
+    position:fixed; left:20px; top:50%; transform:translateY(-50%); z-index:60;
+    display:flex; flex-direction:column; gap:12px; padding:0; margin:0;
+    background:none !important; border:0 !important; box-shadow:none !important;
+  }
+  .side-nav-item {
+    display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none;
+    font-size:13px; color:#94a3b8; letter-spacing:2px; padding:4px 8px;
+    background:none !important; border:0 !important; box-shadow:none !important;
+    text-decoration:none !important; border-radius:4px;
+    transition:all .22s ease; white-space:nowrap;
+  }
+  .side-nav-item::before {
+    content:""; width:16px; height:2px; background:#cbd5e1;
+    transition:all .22s ease; flex:none;
+  }
+  .side-nav-item:hover { color:#22d3ee; transform:translateX(10px); text-shadow:0 0 12px rgba(34,211,238,.55); }
+  .side-nav-item:hover::before { width:28px; background:#22d3ee; box-shadow:0 0 10px rgba(34,211,238,.9); }
+  @media (max-width:900px){ .side-nav { display:none; } }
+
+  /* 回到顶部 */
+  #totop {
+    position:fixed; right:22px; bottom:22px; z-index:100;
+    width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+    background:linear-gradient(135deg,#0e7490,#155e75); color:#fff; font-size:20px;
+    box-shadow:0 6px 18px rgba(14,116,144,.4); opacity:0; pointer-events:none;
+    transition:opacity .25s ease, transform .18s ease;
+  }
+  #totop:hover { transform:translateY(-3px); }
+
+  /* ---------- 章节 ---------- */
+  section { padding:44px 0 8px; }
+  .sec-title {
+    display:flex; align-items:center; gap:12px; font-size:24px; font-weight:700; color:#0f172a;
+    margin-bottom:20px;
+  }
+  .sec-title::before { content:""; width:6px; height:26px; border-radius:3px; background:linear-gradient(180deg,#0ea5e9,#0f766e); }
+  .card { background:#fff; border:1px solid #e5edf3; border-radius:14px; padding:22px 24px; margin-bottom:16px; }
+  .card p + p { margin-top:10px; }
+
+  /* 关于我 · 高亮段 */
+  .hl-box {
+    margin-top:14px; padding:16px 20px; border-radius:12px;
+    background:linear-gradient(135deg,#eef9fd,#e4f5fb);
+    border:1px solid #c9e9f8; border-left:4px solid #0e7490;
+    font-size:14.5px; color:#155e75;
+  }
+  .hl-box p { margin:0; }
+
+  /* 技能 */
+  .skills { display:grid; grid-template-columns:repeat(auto-fit,minmax(420px,1fr)); gap:16px; }
+  .skill { background:#fff; border:1px solid #e5edf3; border-left:4px solid #0e7490; border-radius:12px; padding:16px 20px; }
+  .skill h3 { font-size:16px; color:#0f172a; margin-bottom:6px; }
+  .skill p { font-size:13.5px; color:#4b5563; }
+  .skill.brown { border-left-color:#92400e; }
+  .card ul { padding-left:20px; font-size:14px; color:#374151; }
+  .card li { margin-bottom:5px; }
+
+  /* 作品表 */
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; font-size:13.5px; }
+  th,td { padding:10px 12px; border-bottom:1px solid #e8eef4; text-align:left; vertical-align:top; }
+  th { background:#f1f7fb; color:#334155; font-weight:600; white-space:nowrap; }
+  tr:last-child td { border-bottom:none; }
+  .tag {
+    display:inline-block; font-size:12px; padding:2px 10px; border-radius:999px; white-space:nowrap;
+    background:#e0f2fe; color:#0369a1;
+  }
+  .tag.t2 { background:#ede9fe; color:#6d28d9; }
+  .tag.t3 { background:#dcfce7; color:#15803d; }
+  .tag.t4 { background:#ffedd5; color:#c2410c; }
+
+  /* 经历时间线 */
+  .job { border-left:2px solid #cbd5e1; padding:0 0 22px 22px; margin-left:6px; position:relative; }
+  .job:last-child { padding-bottom:4px; }
+  .job::before {
+    content:""; position:absolute; left:-7px; top:6px; width:12px; height:12px; border-radius:50%;
+    background:#0e7490; border:2px solid #fff; box-shadow:0 0 0 2px #0e7490;
+  }
+  .job h3 { font-size:16.5px; color:#0f172a; }
+  .job .meta { font-size:13px; color:#64748b; margin:2px 0 6px; }
+  .job .role {
+    display:inline-block; font-size:12.5px; font-weight:700; color:#0e7490;
+    background:#e0f2fe; border-radius:6px; padding:2px 10px; margin-bottom:8px;
+  }
+  .job ul, .job ol { padding-left:20px; font-size:14px; color:#374151; }
+  .job li { margin-bottom:5px; }
+  .job .achievements {
+    margin-top:10px;
+  }
+  .job .achievements > b {
+    display:block; font-size:14px; font-weight:700; color:#0f172a;
+    margin-bottom:6px; font-family:inherit; font-style:normal;
+  }
+  .job .timeline-note, .card .timeline-note {
+    margin-top:8px; padding:10px 14px; border-radius:8px; background:#f5f9fc; border:1px dashed #b6d4e6;
+    font-size:13px; color:#475569; line-height:1.8;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+  }
+  #projects .timeline-note { border:0; }
+  .job .timeline-note b, .card .timeline-note b { color:#0e7490; }
+  .job .timeline-note b.tech, .card .timeline-note b.tech {
+    color:#111827; font-weight:700;
+    font-family:"SimHei","Microsoft YaHei","PingFang SC",sans-serif;
+  }
+  .job .reason {
+    margin-top:8px; font-size:13.5px; color:#6b7280;
+    font-family:"KaiTi","STKaiti","楷体",serif; font-style:italic; letter-spacing:.3px;
+  }
+  .job .reason b { color:#b45309; font-style:normal; }
+
+  /* 教育 */
+  .edu-row { display:flex; flex-wrap:wrap; gap:8px 24px; font-size:14px; padding:10px 0; border-bottom:1px dashed #dbe3ea; }
+  .edu-row:last-child { border-bottom:none; }
+  .edu-row .time { color:#64748b; min-width:120px; }
+  .edu-row .lvl { color:#0e7490; font-weight:600; }
+
+  /* 页脚 */
+  footer { margin-top:48px; background:#0f172a; color:#94a3b8; padding:32px 0 40px; font-size:13px; }
+  footer .wrap { display:flex; flex-wrap:wrap; gap:8px 24px; align-items:center; justify-content:space-between; }
+  footer a { color:#7dd3fc; }
+
+  @media (max-width:760px){
+    .hero .wrap { padding-right:112px; }
+    .hero .avatar-wrap { width:96px; height:96px; right:14px; }
+  }
+  @media (max-width:720px){
+    .hero h1 { font-size:34px; letter-spacing:5px; }
+    .skills { grid-template-columns:1fr; }
+    .stat { min-width:44%; }
+  }
+
+  /* 导航与照片查看器：键盘操作及固定导航避让 */
+  :root { --anchor-offset:72px; }
+  #top, section[id] { scroll-margin-top:var(--anchor-offset); }
+  a:focus-visible, button:focus-visible, .image-trigger:focus-visible {
+    outline:3px solid #0284c7; outline-offset:5px;
+  }
+  .hero a:focus-visible, .lightbox button:focus-visible { outline-color:#7dd3fc; }
+  .side-nav { backdrop-filter:none; -webkit-backdrop-filter:none; }
+  .side-nav-item:focus-visible { color:#0e7490; }
+  .side-nav-item:focus-visible::before { width:28px; background:#0e7490; }
+  .image-trigger {
+    display:block; max-width:100%; padding:0; border:0; border-radius:5px;
+    background:transparent; font:inherit; line-height:0; cursor:zoom-in;
+  }
+  .image-trigger img { display:block; }
+  .gal > .image-trigger { width:100%; min-width:0; }
+  .lightbox {
+    width:100vw; height:100vh; height:100dvh; max-width:none; max-height:none;
+    margin:0; padding:76px 80px; border:0; color:#e2e8f0;
+  }
+  .lightbox[open] { display:flex; }
+  .lightbox::backdrop { background:rgba(8,15,25,.84); }
+  .lightbox img { max-width:100%; max-height:100%; object-fit:contain; cursor:zoom-out; }
+  .lightbox button { font-family:inherit; }
+  .lb-close {
+    display:flex; align-items:center; justify-content:center;
+    width:44px; height:44px; padding:0; border:1px solid rgba(148,163,184,.35);
+    border-radius:50%; background:rgba(15,23,42,.55);
+  }
+  .lightbox button[hidden] { display:none; }
+  @media (max-width:560px) {
+    .lightbox { padding:76px 16px 94px; }
+    .lb-nav { top:auto; bottom:28px; transform:none; width:44px; height:44px; }
+    .lb-prev { left:20px; } .lb-next { right:20px; }
+    .lb-count { bottom:38px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    *, *::before, *::after { transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="主导航">
+  <div class="wrap">
+    <a class="logo" href="#top">彭瀚</a>
+    <a class="nav-link" href="#about">关于我</a>
+    <a class="nav-link" href="#skills">专业技能</a>
+    <a class="nav-link" href="#experience">工作经历</a>
+    <a class="nav-link" href="#projects">项目经历</a>
+    <a class="nav-link" href="#education">教育背景</a>
+    <a class="nav-link" href="#download">获取简历</a>
+  </div>
+</nav>
+
+<!-- ============ 头部英雄区（含联系信息与作品入口） ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="avatar-wrap">
+    <img class="avatar" src="./assets/img-01.jpg" alt="彭瀚">
+    <img class="avatar avatar2" src="./assets/img-02.jpg" alt="彭瀚另一面">
+  </div>
+    <div class="badge">AI 训练师 × 数据工程师</div>
+    <h1>彭瀚</h1>
+    <p class="slogan">8 年 AI 数据一线经验 · 文理双修 · 用作品说话</p>
+    <div class="stats">
+      <div class="stat"><b>8年</b><span>AI 数据经验</span></div>
+      <div class="stat"><b>60人</b><span>团队管理</span></div>
+      <div class="stat"><b>12+</b><span>原创作品</span></div>
+      <div class="stat"><b>2000-6000元</b><span>月均 AI 投入</span></div>
+    </div>
+    <div class="contact-lines">
+      <div><b>邮箱：</b><a href="mailto:hannermyali@vip.qq.com">hannermyali@vip.qq.com</a></div>
+      <div><b>社交主页：</b>公众号 Ideator.ai ｜ <a href="https://www.bilibili.com/read/readlist/rl290603">B 站专栏</a> ｜ <a href="https://maimai.cn/contact/share/card?u=opan5wzmowh6&amp;_share_channel=copy_link">脉脉</a></div>
+    </div>
+    <div class="links-row">
+      <a class="link-card lc1" href="https://my.feishu.cn/base/G4rJbFXGFaFSetsQctkc64yznug" target="_blank" rel="noopener">
+        <span class="ic">▣</span><span>作品库 · 多维表格<span class="sub">按类别筛选全部作品</span></span><span class="arrow">→</span>
+      </a>
+      <a class="link-card lc2" href="https://baxfd902fwu.feishu.cn/wiki/HzN7wnIZaiZ7J0kmp9WcQ1zGnch?sheet=078c0d" target="_blank" rel="noopener">
+        <span class="ic">◈</span><span>持续更新的作品记录<span class="sub">原始飞书表格 · 长期更新</span></span><span class="arrow">→</span>
+      </a>
+      <a class="link-card lc3" href="mailto:hannermyali@vip.qq.com">
+        <span class="ic">✉</span><span>发邮件给我<span class="sub">hannermyali@vip.qq.com</span></span><span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 关于我 -->
+  <section id="about">
+    <h2 class="sec-title">关于我</h2>
+    <div class="card">
+      <p>资深 AI Infra 模型数据方向从业者。全职和兼职（创业）参与过创新工场（Kaifu Lee）、好未来（学而思）、Appen、中国平安、360 海外事业部、4Paradigm、Momenta、Recurrent.ai（Kimi 杨植麟前司）等公司 AI 数据支持项目（CV+NLP+KG）的规划、采集、清洗、标注、质检以及模型调阈工作，拥有丰富的 AI 数据（商务渠道对接、人员培训、项目管理、模型训练实操）经验。目前每月花在 AI 平台/工具订阅上的费用为2000-6000元。</p>
+      <div class="hl-box">
+        <p>不会 AI 算法，但既知 AI 业务侧数据评估，也晓 AI 技术侧实现流程，具备多角度视野与工程思维，擅长快速解决数据采标、清洗等过程中的各种突发问题；既是工科男，也是文艺青年，AI 数据工具开发与诗词歌赋文案写作皆擅长，从这个角度也算得上文理双修：）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专业技能 -->
+  <section id="skills">
+    <h2 class="sec-title">专业技能</h2>
+    <div class="skills">
+      <div class="skill"><h3>AI Coding 与数据工程</h3><p>从 0 到 1 搭建 AI 数据采集、标注、清洗、质检流程并独立开发工具链；基于 Codex、Grok bot（多 Agent 协作型 VLM Agent）、Cursor、Trae 和 Python/PowerShell 定制数据处理脚本、插件及 pipeline。</p></div>
+      <div class="skill"><h3>AI 工具与工作流</h3><p>熟悉 Agent workflow 搭建，能完成网页部署、应用/脚本/插件制作及业务流程提效；了解 Coze、Dify、HiAgent 等情景对话型 Agent 制作。</p></div>
+      <div class="skill"><h3>模型部署与调参</h3><p>熟悉 Ollama 本地模型部署、模型调参与基础推理环境配置；参与过 MXNet 训练/调参流程。</p></div>
+      <div class="skill"><h3>Prompt Engineering</h3><p>具备 Prompt 从 0 到 1 设计、优化、改写与结构化输出能力，可结合业务场景提升模型响应质量。</p></div>
+      <div class="skill"><h3>脚本与自动化</h3><p>熟悉 Python 数据分析、爬虫采集、CMD/PowerShell 批处理脚本，能处理数据集下载、清洗、调度与批量任务自动化。</p></div>
+      <div class="skill"><h3>Linux 与数据处理环境</h3><p>熟悉 Linux 基础运维、训练集/测试集处理、数据查看与下载、Vim 脚本编辑等常用操作。</p></div>
+      <div class="skill brown"><h3>商务与团队</h3><p>商务话术、客服话术、AI 数据业务拓展、团队组建与培养、OKR 激励、绩效方案制定、AI 训练流程优化、标注工具针对性调优，结合深度学习技术边界帮助产品完善与功能研发。</p></div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience">
+    <h2 class="sec-title">工作经历</h2>
+    <div class="job">
+      <h3>北京灵感时刻科技有限公司</h3>
+      <div class="meta">2025.7.21 - 2026.1.16（远程兼职）<br>2026.1.17 - 2026.10.30（全职坐班）</div>
+      <span class="role">职位：AI 数据工程师</span>
+      <ul>
+        <li>依据公司出海产品的形态（端侧小参数模型）以及多模态数据（文本、图像、语音）需求，对预训练和后训练所需数据进行：来源规划、精准批量采集、高质量清洗以及合规标注，并独立负责此流程中所需工具的开发；</li>
+        <li>建立 AI 数据处理 SOP，对接海外平台（Upwork、Fiverr、Toptal 等）第三方数据供应团队，培训、验收其外包数据项目；协助公司后端数据工具的构建完善；</li>
+        <li>规划并建设人、事、物三大类实体关系图谱；</li>
+        <li>批量生产并在网络上分发：业务相关内容与结构数据，实现一定程度的 GEO；帮助提升外展推荐算法在业务逻辑上的合理性，规划 app 端外展类型/标签、编纂外展词条/语句；</li>
+        <li>为不同项目组同事提供第三方数据供应商人脉资源支持，包括：个人兼职、标注小团队、数据集公司；并为其对供应商的管理提供建议、为采标项目流程和标准的建设提供经验；</li>
+        <li>为公司网络做运维；</li>
+      </ul>
+      <div class="timeline-note"><b>业绩与产出：</b><br>
+        1. 全球50000+名人Face（皆多视图，且皆为高清无妆无挡的肖像、大头照）和Speaker（每人1-5条≥20s无噪声、多维度[场景、年龄、主题 等]）的音视频素材生产；<b class="tech">【所用到的技术和模型：人脸检测与聚类（RetinaFace、ArcFace、DBSCAN）、声画匹配（InsightFace、TalkNet）、说话人分离与重叠语音检测（pyannote、Voxebra）、音频事件检测（PANNs）、人声提取与降噪（Demucs、DeepFilterNet）、推理加速（CUDA、ONNX Runtime）、流程优化（模型常驻、缓存复用、异步预取、渐进筛选与提前终止）等】</b><br>
+        2. 以人物库为锚点构造 人、事、物、概念 关系图谱，规划关系类型100+，采集关系对80000+对，采集知名事件10000+条；<b class="tech">【所用到的工具：Gemini、Grok、chatGPT 等】</b><br>
+        3. 牵头 个人兼职（各小语种专业学生[专八和C1为主]、海外平台[如：Upwork]个人兼职者）、第三方小团队（10-50人那种）和大型AI数据公司（Appen、海天瑞声、慧澜国际 等）与本公司不同业务团队的合作，实现了算法团队SR（说话人识别）、SD（说话人分割）、VAD（语音检测）和SLP（口语处理）等在各小语种场景下的模型性能提升；<b class="tech">【所用到的能力：创业期间的人脉+沟通技巧+对AI数据行业的积累/了解】</b>
+      </div>
+      <div class="reason"><b>离职原因：</b>【公司架构调整，整批裁员20+】</div>
+    </div>
+    <div class="job">
+      <h3>柯莱特信息技术有限公司（外包百度）</h3>
+      <div class="meta">2024.8 – 2025.3</div>
+      <span class="role">职位：Agent 评估 / AI 训练组长</span>
+      <ul>
+        <li>百度文心智能体长文本对话大模型（ChatBot）所需数据的采集（制作）与标注（改写）。</li>
+        <li>评估模型理解自然语言的能力（文本分类、推理、问答、情感分析等）；评估模型输出与人类价值观、伦理标准的一致性；测试模型面对恶意输入的鲁棒性与安全性；针对特定行业/垂类（如问诊、情感建议）评估模型在实际业务中的适用性。</li>
+        <li>监测并评估 Agent 智能体生产流程中各环节问题（评估专员对照客观标准评估，产品运营靠主观感知审核），及时解决或提交。</li>
+        <li>负责百度万话、月匣 AIGC 平台（对标猫箱、星野、wow 等，月匣预计 25 年中上线）的角色、剧本、玩法规划/生成/改写，以及角色与背景图生成。</li>
+        <li>通过编写 prompt 实现海量数据批处理 python 脚本生成、python 爬虫生成、大批量数据内容/格式改写。</li>
+      </ul>
+      <div class="timeline-note"><b>任职节点：</b>8月26号入职 → 9月5号任文字提取环节组长（文心智能体） → 9月28号兼任图片处理环节组长 → 11月6号兼任 Agent 对话文本提取/改写组长 → 11月28号兼任（百度 app-AI剧场、月匣 AIGC 平台）剧本角色/背景文生图环节组长（对标 wow、星野、猫箱、冒泡鸭、DZMM、AI风月 等）</div>
+      <div class="reason"><b>离职原因：</b>外包项目告一段落。</div>
+    </div>
+    <div class="job">
+      <h3>自由职业期 · AI 数据采标与标注</h3>
+      <div class="meta">2020.5 – 2024.8</div>
+      <span class="role">职位：AI 数据供应商 / 采标兼职</span>
+      <ul>
+        <li>承接图像（场景/物品识别、无人驾驶 OD/SEG/点云）、语音（情绪分级、语义判断/反馈、方言/外语转录）、知识图谱（标签分类树、智能问答/搜索）等 AI 数据采集、清洗、标注项目。</li>
+        <li>客户包括贵州梦动科技（无人驾驶 2D3D 目标检测和语义分割）、上海追势科技（AVP 自动泊车目标检测）、重庆长安汽车（2D 道路标注、3D 点云识别）、科大讯飞（智能对话编写、语句意向/情绪判断）、成都优立方（监狱标注人员培训）、阿里（OCR 分词、敏感词审核）、中汽智能（道路物品识别），以及龙猫、数据堂（数加加）、博彦、文思海辉、Appen 等第三方数据供应商的下线项目。</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>上海追势科技</h3>
+      <div class="meta">2020.9 – 2020.11</div>
+      <span class="role">职位：数据标注主管</span>
+      <ul>
+        <li>无人驾驶路测数据采集标注（OD 和 SEG）。</li>
+        <li>自动泊车数据采集标注（AVP 系统）。</li>
+        <li>对接标注工具制作团队与第三方标注团队。</li>
+      </ul>
+      <div class="reason"><b>离职原因：</b>1、面试时 CEO 担保会在半年内将业务拓展到京津，方便就近办公，但实际没有做到；2、寻求新的发展。</div>
+    </div>
+    <div class="job">
+      <h3>字节跳动（内容质量中心 CQC）</h3>
+      <div class="meta">2020.4 – 2020.5</div>
+      <span class="role">职位：数据中心项目负责人</span>
+      <ul>
+        <li>抖音、头条、西瓜、皮皮虾等短视频社交 APP 用户发布内容及回复内容的分词义标注团队对接、管理。</li>
+        <li>模型内容策略整理、模型算法优化调阈。</li>
+        <li>审核及标注项目的内部团队对接。</li>
+      </ul>
+      <div class="reason"><b>离职原因：</b>1、<a href="https://www.zhihu.com/question/24598839/answer/807239553" target="_blank" rel="noopener">相关说明（同事视角）</a>；2、<a href="https://www.zhihu.com/question/24598839/answer/1282952934" target="_blank" rel="noopener">相关说明（本人视角）</a></div>
+    </div>
+    <div class="job">
+      <h3>瀚行 AI 数据训练（工作室）</h3>
+      <div class="meta">2018.8 – 2020.2</div>
+      <span class="role">职位：创始人</span>
+      <ul>
+        <li>业务渠道规划、BD 对接（承接 AI 数据的采集、清洗、标注、建模、质检外包）。</li>
+        <li>团队成员（60 人）对应项目下的采、标培训。</li>
+        <li>项目整理分发、验收、交付。</li>
+        <li>合作客户概览：中国平安【智能客服（知识图谱/语义理解）】、好未来【智能作业批改、AI 老师、直播 AI 语音】、360【多个手游 AI 辅助（PUBG、COC 等）】、4Paradigm【OCR 文字识别（AI 英雄微信众包小程序）】、Momenta【无人驾驶道路和车辆等物品识别】、Recurrent.ai【方言识别】、DeepAIT【手游卡通人物/物品识别】、广目科技【人脸特征区分识别】、识加科技【道路场景/物品识别】。</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>创新工场</h3>
+      <div class="meta">2018.4 – 2018.10</div>
+      <span class="role">职位：数据标注运营</span>
+      <figure class="kaifu-wrap">
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：18年与开复" onclick="openLb(this.querySelector('img'), this)"><img class="photo-thumb" id="kaifu-thumb" src="./assets/img-03.jpg" alt="18年与开复"></button>
+        <figcaption class="photo-cap">18年与开复</figcaption>
+      </figure>
+      <ul>
+        <li>参与工场 AI 赋能新零售场景下的智能货柜 AI 模型训练项目：采集、筛选、标注货柜需要的数据。</li>
+        <li>指导培训货柜标注项目组所有成员（离职前 12 人）数据处理工作。</li>
+        <li>对智能硬件 bug 的采集与评估。</li>
+      </ul>
+      <div class="reason"><b>离职原因：</b>不懂 AI 训练的领导（测试调岗过来的）整天忙着育儿和八卦；自己开始接活儿，但由于体量太大无法同时兼顾全职、兼职，便离职了，详见下一份工作经历。</div>
+    </div>
+    <div class="job">
+      <h3>北京小白世纪网络科技有限公司</h3>
+      <div class="meta">2016.12 – 2017.12</div>
+      <span class="role">职位：工程运营组长</span>
+      <p style="font-size:14px;color:#374151;margin-bottom:8px;">主职工作内容（AI 训练数据全流程）：</p>
+      <ul>
+        <li><b>规划：</b>CV（计算机视觉）智能识别广告位模型所需素材的规划，根据公司产品定位和技术水平锁定素材主要类别、采集方式和方向。</li>
+        <li><b>采集：</b>操作内部工具网络爬取数据；偶尔手机拍摄采集。</li>
+        <li><b>清洗：</b>使用相应工具按需智能处理视频素材（如批量自动提取视频中所有人脸、批量排除噪声、自动去重等）。</li>
+        <li><b>标注：</b>按工程师需求分别使用相应标注工具对视频图像进行所分类标签下的精细标注，获得工程师所需格式（xml 或 json 或某些特殊格式）。</li>
+        <li><b>建模：</b>MXNet 深度学习框架下操作物品模型一整套训练流程（建立测试集模型、跑验证集、调阈），即测试、优化训练方案和模型效果。</li>
+      </ul>
+      <div class="reason"><b>离职原因：</b>CEO 一开始做 AI 股票分析，没拉到融资；于是做 CV 项目，该阶段我入职了；但融资不高，于是转去做 AI 医疗，需要去广州，我没去，也不愿意过去。</div>
+    </div>
+    <div class="job">
+      <h3>早期经历</h3>
+      <div class="meta">2014 – 2016</div>
+      <ul>
+        <li>中国石油渤海装备中成机械制造（装配钳工，2014.7–2015.7）→ 五八同城（网络推广顾问，2015.7–2015.12）→ 北星博辉 DELL 售后支持（电话技术支持工程师，2015.12–2016.11）。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 项目经历 -->
+  <section id="projects">
+    <h2 class="sec-title">项目经历</h2>
+    <div class="card">
+      <h3 style="font-size:16.5px;color:#0f172a;">训练模型准确率提升计划</h3>
+      <div class="meta" style="font-size:13px;color:#64748b;margin:2px 0 10px;">2017.09 – 2017.12 · 北京小白世纪</div>
+      <div class="timeline-note"><b>项目初衷：</b>当前公司深度学习框架跑出图片的识别率并不特别令人满意；如果说核心技术能力业内都差不多的话，是否可以用相对平民化的手段对机器判断的结果进行再一轮筛选以提高正确率。公司主要做产品，并非直接比拼技术实力（当然这个也会逐渐提升），所要展示、跟人家竞争的也是产品的功能、参数等，所以后端数据诞生的“过程”没有它所表现的“结果”那么吸引人。</div>
+      <div class="timeline-note" style="margin-top:10px;"><b>项目思路：</b><br>
+        <b>原方法：</b>按类搜集图片交由深度学习框架进行筛选，完全依赖深度学习技术对训练图片进行识别和建模。【如：训练 “woman” 模型，训练员搜集主观认为符合 “woman” 的图片素材提交给库，然后机器进行识别并建立相应 woman 模型。】<br>
+        <b>新方法：</b>搜集图片的步骤暂时不变；在深度学习框架进行“建模”之前，以“标签”形式将所训练物品拆分，以 2 个或多个标签来定义一个模型。【如：先标注 “people”，再分别标注女士发型、高跟鞋、短裙等独立且有“特征”的物品若干数量。训练时在机器识别出 “people” 的条件下增加标签：如 “people”+“女士发型” 必须同时满足两项则定义为 “woman”；“people”+“高跟鞋”+“短裙” 在满足 “people” 的前提下，高跟鞋与短裙至少存在一件，亦定义为 “woman”。】
+      </div>
+      <p style="font-size:14px;color:#374151;margin:12px 0 8px;"><b>我的工作：</b></p>
+      <ul>
+        <li>整理产品、运营相关后台数据。</li>
+        <li>参考产品运营同事与深度学习工程师同事们的建议，制作客户需求与产品功能匹配表（Excel）。</li>
+        <li>针对性总结客户需求 label。</li>
+        <li>根据往期模型数据效果以及对客户需求 label 的匹配，提取特征度较高的几个模型进行新方法测试。</li>
+        <li>跟踪测试全过程并输出文档，依据测试集跑模型效果（准确和召回指标）提出优化建议并实行。</li>
+        <li>指导和安排 3 名下属的相应测试工作。</li>
+        <li>所有工作总结成可视化图表汇报。</li>
+      </ul>
+      <div class="timeline-note" style="margin-top:10px;"><b>项目结果：</b>以新、老方法完成建模，然后跑同一批测试集进行对比（% 为模型识别准确率）：</div>
+      <table style="margin-top:12px;">
+        <thead><tr><th>模型</th><th>原方法准确率</th><th>新方法准确率</th></tr></thead>
+        <tbody>
+          <tr><td>woman</td><td>55.16%</td><td><b>80.26%</b></td></tr>
+          <tr><td>bathroom</td><td>29.52%</td><td><b>48.77%</b></td></tr>
+          <tr><td>diningtable</td><td>63.46%</td><td><b>82.39%</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="font-size:16.5px;color:#0f172a;">各中小型 AI 公司数据供应</h3>
+      <div class="meta" style="font-size:13px;color:#64748b;margin:2px 0 10px;">2018.08 – 2020.02 · 瀚行工作室</div>
+      <p style="font-size:14px;color:#374151;margin-bottom:10px;">面向各中小型 AI 公司的数据供应项目（客户与项目明细）：</p>
+      <ul>
+        <li>中国平安 —— 智能客服（知识图谱/语义理解）</li>
+        <li>好未来 —— 智能作业批改、AI 老师、直播 AI 语音</li>
+        <li>360 —— 多个手游 AI 辅助（PUBG、COC 等）</li>
+        <li>4Paradigm —— OCR 文字识别（AI 英雄微信众包小程序）</li>
+        <li>Momenta —— 无人驾驶道路和车辆识别</li>
+        <li>Recurrent.ai —— 方言识别</li>
+        <li>DeepAIT —— 手游卡通人物/物品识别</li>
+        <li>广目科技 —— 人脸特征区分识别</li>
+        <li>识加科技 —— 道路场景/物品识别 等</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:16.5px;color:#0f172a;">创业期间部分截图展示</h3>
+      <div class="meta" style="font-size:13px;color:#64748b;margin:2px 0 10px;">2018.08 – 2020.02 · 瀚行工作室（点击小图可放大）</div>
+      <div class="gal">
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 1" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-04.jpg" alt="创业期间截图 1"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 2" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-05.jpg" alt="创业期间截图 2"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 3" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-06.jpg" alt="创业期间截图 3"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 4" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-07.jpg" alt="创业期间截图 4"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 5" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-08.jpg" alt="创业期间截图 5"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 6" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-09.jpg" alt="创业期间截图 6"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 7" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-10.jpg" alt="创业期间截图 7"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 8" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-11.jpg" alt="创业期间截图 8"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 9" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-12.jpg" alt="创业期间截图 9"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 10" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-13.jpg" alt="创业期间截图 10"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 11" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-14.jpg" alt="创业期间截图 11"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 12" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-15.jpg" alt="创业期间截图 12"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 13" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-16.jpg" alt="创业期间截图 13"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 14" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-17.jpg" alt="创业期间截图 14"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 15" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-18.jpg" alt="创业期间截图 15"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 16" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-19.jpg" alt="创业期间截图 16"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 17" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-20.jpg" alt="创业期间截图 17"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 18" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-21.jpg" alt="创业期间截图 18"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 19" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-22.jpg" alt="创业期间截图 19"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 20" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-23.jpg" alt="创业期间截图 20"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 21" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-24.jpg" alt="创业期间截图 21"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 22" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-25.jpg" alt="创业期间截图 22"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 23" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-26.jpg" alt="创业期间截图 23"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 24" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-27.jpg" alt="创业期间截图 24"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 25" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-28.jpg" alt="创业期间截图 25"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 26" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-29.jpg" alt="创业期间截图 26"></button>
+        <button type="button" class="image-trigger" aria-haspopup="dialog" aria-controls="lb" aria-label="放大查看：创业期间截图 27" onclick="openLb(this.querySelector('img'), this)"><img class="gal-item" src="./assets/img-30.jpg" alt="创业期间截图 27"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section id="education">
+    <h2 class="sec-title">教育背景与培训</h2>
+    <div class="card" style="padding:12px 24px;">
+      <div class="edu-row"><span class="time">2015–2017</span><span>天津商业大学 · 工商管理</span><span class="lvl">本科</span></div>
+      <div class="edu-row"><span class="time">2011–2014</span><span>天津工程职业技术学院（统招）· 机械制造与自动化</span><span class="lvl">大专</span></div>
+      <div class="edu-row"><span class="time">2019.7–11</span><span>开课吧 · 大数据分析全栈工程师训练营（对标阿里 P6）</span><span class="lvl">训练营</span></div>
+    </div>
+  </section>
+
+  <!-- 获取完整简历 -->
+  <section id="download">
+    <h2 class="sec-title">获取完整简历（PDF / DOCX）</h2>
+    <div class="card">
+      <p>为保护个人隐私，公开实体页不直接挂出明文手机号与附件下载。如需完整版 PDF / DOCX 简历或项目合作交流，欢迎通过邮件或微信渠道联系索取：</p>
+      <div class="dl-row">
+        <a class="dl-btn" href="mailto:hannermyali@vip.qq.com?subject=%E7%B4%A2%E5%8F%96%E5%BD%AD%E7%80%9A%E5%AE%8C%E6%95%B4%E7%AE%80%E5%8E%86%EF%BC%88PDF%2FDOCX%EF%BC%89">✉ 邮件索取完整简历（hannermyali@vip.qq.com）</a>
+        <a class="dl-btn dl-docx" href="https://maimai.cn/contact/share/card?u=opan5wzmowh6&amp;_share_channel=copy_link" target="_blank" rel="noopener">◈ 通过脉脉名片联系</a>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:#64748b;">也可关注微信公众号 <b>Ideator.ai</b> 私信联系。</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>彭瀚 · AI 训练师 × 数据工程师 · 8 年 AI 数据经验</span>
+    <span>邮箱 <a href="mailto:hannermyali@vip.qq.com">hannermyali@vip.qq.com</a> ｜ 公众号 Ideator.ai</span>
+  </div>
+</footer>
+
+<!-- 侧边栏定位导航 -->
+<nav class="side-nav" aria-label="章节导航">
+  <a class="side-nav-item" href="#top">名片及作品</a>
+  <a class="side-nav-item" href="#about">关于我</a>
+  <a class="side-nav-item" href="#skills">专业技能</a>
+  <a class="side-nav-item" href="#experience">工作经历</a>
+  <a class="side-nav-item" href="#projects">项目经历</a>
+  <a class="side-nav-item" href="#education">教育背景</a>
+  <a class="side-nav-item" href="#download">获取简历</a>
+</nav>
+
+<!-- 回到顶部 -->
+<button id="totop" onclick="scrollTopWin()" aria-label="回到顶部">↑</button>
+
+<!-- 开复合照灯箱 -->
+<dialog class="lightbox" id="lb" aria-label="照片查看器" onclick="if(event.target === this) closeKaifu()">
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="上一张" title="上一张（左方向键）" onclick="event.stopPropagation(); stepLb(-1)">‹</button>
+  <img id="kaifu-lb" onclick="event.stopPropagation(); closeKaifu()" title="点击图片关闭" src="./assets/img-31.jpg" alt="18年与开复">
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="下一张" title="下一张（右方向键）" onclick="event.stopPropagation(); stepLb(1)">›</button>
+  <button type="button" class="lb-close" id="lbClose" aria-label="关闭照片查看器" title="关闭（Esc）" autofocus onclick="event.stopPropagation(); closeKaifu()">×</button>
+  <span class="lb-count" id="lbCount" role="status" aria-live="polite" aria-atomic="true"></span>
+</dialog>
+
+<script>
+
+var galImgs = [];
+var lbIdx = -1;
+var lbMode = 'gal';
+var lbReturnFocus = null;
+var lbPreviousOverflow = '';
+var lb = document.getElementById('lb');
+var lbImage = document.getElementById('kaifu-lb');
+var lbClose = document.getElementById('lbClose');
+
+function collectGal() {
+  galImgs = Array.prototype.slice.call(document.querySelectorAll('.gal-item'));
+}
+function showLb(img) {
+  lbImage.src = img.src;
+  lbImage.alt = img.alt || '放大照片';
+  document.getElementById('lbCount').textContent = lbMode === 'gal'
+    ? (lbIdx + 1) + ' / ' + galImgs.length : lbImage.alt;
+  var canStep = lbMode === 'gal' && galImgs.length > 1;
+  document.getElementById('lbPrev').hidden = !canStep;
+  document.getElementById('lbNext').hidden = !canStep;
+}
+function openLb(img, trigger) {
+  collectGal();
+  lbIdx = galImgs.indexOf(img);
+  lbMode = lbIdx >= 0 ? 'gal' : 'single';
+  showLb(img);
+  if (!lb.open) {
+    lbReturnFocus = trigger || document.activeElement;
+    lbPreviousOverflow = document.body.style.overflow;
+    lb.showModal();
+    document.body.style.overflow = 'hidden';
+    lbClose.focus({preventScroll:true});
+  }
+}
+function stepLb(direction) {
+  if (!lb.open || lbMode !== 'gal' || !galImgs.length) return;
+  lbIdx = (lbIdx + direction + galImgs.length) % galImgs.length;
+  showLb(galImgs[lbIdx]);
+}
+function closeKaifu() {
+  if (!lb.open) return;
+  lb.close();
+  document.body.style.overflow = lbPreviousOverflow;
+  if (lbReturnFocus && lbReturnFocus.isConnected) {
+    lbReturnFocus.focus({preventScroll:true});
+  }
+  lbReturnFocus = null;
+}
+// Native modal dialogs keep keyboard focus inside and make the background inert.
+lb.addEventListener('cancel', function(event) {
+  event.preventDefault();
+  closeKaifu();
+});
+lb.addEventListener('keydown', function(event) {
+  if (!lb.open) return;
+  if (event.key === 'ArrowLeft') { event.preventDefault(); stepLb(-1); }
+  else if (event.key === 'ArrowRight') { event.preventDefault(); stepLb(1); }
+});
+function scrollTopWin() {
+  window.location.hash = 'top';
+}
+var tb = document.getElementById('totop');
+function updateTopButton() {
+  var visible = window.scrollY > 400;
+  tb.style.opacity = visible ? '1' : '0';
+  tb.style.pointerEvents = visible ? 'auto' : 'none';
+  tb.tabIndex = visible ? 0 : -1;
+  tb.setAttribute('aria-hidden', visible ? 'false' : 'true');
+}
+window.addEventListener('scroll', updateTopButton, {passive:true});
+updateTopButton();
+</script>
+
+</body>
+</html>
